@@ -1,4 +1,4 @@
-import "./app.css";
+
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
