@@ -1,0 +1,141 @@
+.myGigs {
+    display: flex;
+    justify-content: center;
+    color: #555;
+  
+    .container {
+      width: 1400px;
+      padding: 50px 0px;
+  
+      .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+  
+        button {
+          background-color: #1dbf73;
+          color: white;
+          font-weight: 500;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #16a85d;
+          }
+        }
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        tr {
+          height: 50px;
+          border-bottom: 1px solid #ddd;
+  
+          th {
+            text-align: left;
+            padding: 10px;
+            font-weight: 500;
+          }
+  
+          td {
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+  
+            sup {
+              font-size: 12px;
+            }
+  
+            .image {
+              width: 50px;
+              height: 25px;
+              object-fit: cover;
+            }
+  
+            .delete {
+              width: 20px;
+              cursor: pointer;
+              transition: transform 0.2s ease;
+  
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+  
+          &:nth-child(even) {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  
+    /* Responsive Design for smaller screens */
+    @media only screen and (max-width: 1200px) {
+      .container {
+        width: 100%;
+        padding: 20px;
+      }
+  
+      .title button {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+  
+      table {
+        font-size: 13px;
+      }
+  
+      table th,
+      table td {
+        padding: 8px;
+      }
+    }
+  
+    @media only screen and (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+  
+      .title button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+  
+      table {
+        font-size: 12px;
+      }
+  
+      table th,
+      table td {
+        padding: 6px;
+      }
+    }
+  
+    @media only screen and (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+  
+      .title button {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+  
+      table {
+        font-size: 12px;
+      }
+  
+      table th,
+      table td {
+        padding: 5px;
+      }
+    }
+  }
+  

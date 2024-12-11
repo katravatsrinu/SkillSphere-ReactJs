@@ -1,0 +1,131 @@
+.orders {
+    display: flex;
+    justify-content: center;
+    color: #555;
+  }
+  
+  .orders .container {
+    width: 1400px;
+    padding: 50px 0;
+  }
+  
+  .orders .container .title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .orders .container .title button {
+    background-color: #1dbf73;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .orders .container table {
+    width: 100%;
+  }
+  
+  .orders .container table tr {
+    height: 50px;
+  }
+  
+  .orders .container table tr th {
+    text-align: left;
+  }
+  
+  .orders .container table tr td sup {
+    font-size: 12px;
+  }
+  
+  .orders .container table tr td .image {
+    width: 50px;
+    height: 25px;
+    object-fit: cover;
+  }
+  
+  .orders .container table tr td .message {
+    width: 25px;
+    cursor: pointer;
+  }
+  
+  .orders .container table tr:nth-child(even) {
+    background-color: #1dbf730f;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media screen and (max-width: 1200px) {
+    .orders .container {
+      width: 100%;
+      padding: 20px 0;
+    }
+  
+    .orders .container .title {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .orders .container table {
+      font-size: 14px;
+    }
+  
+    .orders .container table tr td .image {
+      width: 40px;
+      height: 20px;
+    }
+  
+    .orders .container table tr td .message {
+      width: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .orders {
+      flex-direction: column;
+    }
+  
+    .orders .container .title {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .orders .container table {
+      font-size: 12px;
+    }
+  
+    .orders .container table tr td .image {
+      width: 30px;
+      height: 15px;
+    }
+  
+    .orders .container table tr td .message {
+      width: 18px;
+    }
+  
+    .orders .container table tr {
+      height: auto;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .orders .container {
+      padding: 10px 0;
+    }
+  
+    .orders .container table {
+      font-size: 10px;
+    }
+  
+    .orders .container table tr td .image {
+      width: 25px;
+      height: 12px;
+    }
+  
+    .orders .container table tr td .message {
+      width: 15px;
+    }
+  }
+  

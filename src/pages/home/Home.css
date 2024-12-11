@@ -1,0 +1,294 @@
+.home {
+    .features {
+      background-color: #f1fdf7;
+      display: flex;
+      justify-content: center;
+      padding: 100px 0px;
+    }
+  
+    .features.dark {
+      background-color: #0d084d;
+  
+      h1 {
+        color: white !important;
+      }
+  
+      i {
+        font-weight: 300;
+      }
+  
+      p {
+        margin-bottom: 20px;
+        color: white !important;
+      }
+  
+      .title {
+        color: white !important;
+        font-weight: 300 !important;
+        font-size: 14px !important;
+      }
+  
+      button {
+        background-color: #1dbf73;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: max-content;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    }
+  
+    .features .container {
+      width: 1400px;
+      display: flex;
+      align-items: center;
+      gap: 200px;
+    }
+  
+    .features .container .item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &:first-child {
+        flex: 2;
+      }
+      &:last-child {
+        flex: 3;
+      }
+  
+      img {
+        width: 100%;
+      }
+  
+      h1 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+  
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #666;
+  
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+  
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        color: gray;
+        line-height: 28px;
+        letter-spacing: 1px;
+      }
+  
+      video {
+        width: 720px;
+      }
+    }
+  
+    .explore {
+      display: flex;
+      justify-content: center;
+      padding: 100px 0px;
+    }
+  
+    .explore .container {
+      width: 1400px;
+    }
+  
+    .explore .container h1 {
+      color: #555;
+    }
+  
+    .explore .container .items {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .explore .container .items .item {
+      width: 250px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    .explore .container .items .item img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .explore .container .items .item .line {
+      width: 50px;
+      height: 2px;
+      background-color: lightgray;
+      transition: all 0.3s ease;
+    }
+  
+    .explore .container .items .item span {
+      font-weight: 300;
+    }
+
+    /* Common styles for both categories and projects */
+.services.testimonials {
+  padding: 5rem 20vw;
+}
+
+.services.testimonials h3 {
+  color: #333333; /* Dark gray */
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.services.testimonials p {
+  color: #7d7d7d; /* Light gray */
+  text-align: center;
+}
+
+.services .testimonial-list-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  overflow-x: scroll;
+  padding: 3rem 0;
+  scroll-behavior: smooth;
+}
+
+.services .testimonial-items {
+  width: 25%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 8px; /* Adds rounded corners to the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+  overflow: hidden; /* Ensures content doesn't overflow card borders */
+  background-color: #ffffff; /* White background */
+}
+
+.services .testimonial-items img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: 150px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensures the image maintains aspect ratio while filling the area */
+  border-radius: 0; /* Remove circular styling */
+}
+
+.services .testimonial-items h4 {
+  color: #333333; /* Dark gray */
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.services .testimonial-items p {
+  line-height: 1.5rem;
+  color: #555555; /* Medium gray for better readability */
+  padding: 0 1rem; /* Adds padding inside the card for text content */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Add custom scrollbar styles (optional) */
+.services .testimonial-list-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.services .testimonial-list-container::-webkit-scrollbar-thumb {
+  background: #333333; /* Dark gray */
+  border-radius: 4px;
+}
+
+.services .testimonial-list-container::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Light gray */
+}
+
+    
+  
+    .explore .container .items .item:hover .line {
+      width: 80px;
+      background-color: #1dbf73;
+    }
+    /* Media Queries */
+    @media only screen and (max-width: 1200px) {
+      .home .features .container {
+        width: 100%;
+        padding: 20px;
+      }
+  
+      .home .features .container .item {
+        gap: 30px;
+      }
+  
+      .home .explore .container {
+        width: 100%;
+      }
+  
+      .home .explore .container .items {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+    @media only screen and (max-width: 768px) {
+      .home .features .container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .home .explore .container .items .item {
+        width: 200px;
+        height: 120px;
+      }
+  
+      .home .explore .container .items {
+        gap: 30px;
+      }
+  
+      .home .features .container .item {
+        flex: 1;
+        align-items: center;
+      }
+    }
+  
+    @media only screen and (max-width: 480px) {
+      .home .features .container {
+        padding: 10px;
+      }
+  
+      .home .features .container .item {
+        flex: 1;
+        gap: 10px;
+      }
+  
+      .home .explore .container .items .item {
+        width: 150px;
+        height: 100px;
+      }
+  
+      .home .explore .container .items .item img {
+        width: 40px;
+        height: 40px;
+      }
+  
+      .home .explore .container .items .item span {
+        font-size: 12px;
+      }
+    }
+  }
+  
