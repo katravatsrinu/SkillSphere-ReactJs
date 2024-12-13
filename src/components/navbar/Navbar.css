@@ -9,6 +9,7 @@
   top: 0;
   z-index: 999;
   transition: 0.5s all ease;
+  width: 100%;
 }
 
 .navbar.active {
@@ -27,7 +28,8 @@
 }
 
 .navbar .container {
-  width: 1400px;
+  width: 100%;
+  max-width: 1400px; /* Max width for large screens */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +39,7 @@
 .navbar .container .logo {
   font-size: 34px;
   font-weight: bold;
+  flex: 1; /* Allows the logo to take available space */
 }
 
 .navbar .container .logo .dot {
@@ -50,6 +53,9 @@
   gap: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  flex: 2; /* Allow links to take available space */
+  justify-content: space-evenly;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .navbar .container .links span {
@@ -110,7 +116,7 @@
 }
 
 .navbar .menu {
-  width: 1400px;
+  width: 100%;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -119,16 +125,14 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* Hide Navbar items on mobile and tablet screens */
-
-/* Tablet and Mobile View - Hide the links except for the hamburger menu */
+/* Media Query for Tablets (1024px and below) */
 @media (max-width: 1024px) {
   .navbar .container .links {
-    display: none;
+    display: none; /* Hide links on tablets */
   }
 
   .navbar .hamburger-menu {
-    display: flex;
+    display: flex; /* Show hamburger menu */
   }
 
   .navbar .menu {
@@ -136,7 +140,7 @@
   }
 }
 
-/* Mobile View */
+/* Mobile View - 768px and below */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -192,6 +196,52 @@
     width: 25px;
     height: 3px;
     background-color: white;
+  }
+
+  /* Adjustments for smaller screen sizes */
+  .navbar .container .logo {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+
+/* For large desktop screens (17.2 inch monitors and higher) */
+@media (min-width: 1200px) {
+  .navbar .container {
+    width: 100%; /* Full width for large screens */
+    max-width: 1400px; /* Limit width to 1400px for readability */
+  }
+
+  .navbar .container .logo {
+    font-size: 36px;
+  }
+
+  .navbar .container .links {
+    gap: 30px;
+  }
+
+  .navbar .container .links button {
+    font-size: 16px;
+  }
+}
+
+/* Extra large desktop screens */
+@media (min-width: 1600px) {
+  .navbar .container {
+    width: 100%;
+    max-width: 1600px; /* Max width for even larger screens */
+  }
+
+  .navbar .container .logo {
+    font-size: 40px;
+  }
+
+  .navbar .container .links {
+    gap: 36px;
+  }
+
+  .navbar .container .links button {
+    font-size: 18px;
   }
 }
 

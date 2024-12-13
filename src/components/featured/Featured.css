@@ -81,6 +81,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: flex-start; /* Align to the left side initially */
+  width: 100%;
 }
 
 .featured .container .left .popular span {
@@ -88,13 +91,18 @@
 }
 
 .featured .container .left .popular button {
-  width: max-content;
+  width: auto; /* Let button width be content-based */
   color: white;
   border: 1px solid white;
   padding: 5px 10px;
   border-radius: 20px;
   background-color: transparent;
   font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.featured .container .left .popular button:hover {
+  background-color: #1dbf73; /* Hover effect */
 }
 
 .featured .container .right {
@@ -118,6 +126,12 @@
   .featured .container .right img {
     height: auto;
     width: 100%;
+  }
+
+  /* Responsive popular items for tablets */
+  .featured .container .left .popular button {
+    font-size: 16px; /* Increase font size for tablets */
+    padding: 8px 16px; /* Adjust padding */
   }
 }
 
@@ -162,6 +176,18 @@
     width: 100%;
     height: 300px;
   }
+
+  /* Responsive popular items for smaller screens */
+  .featured .container .left .popular {
+    justify-content: center; /* Center items */
+    gap: 15px; /* Adjust gap */
+  }
+
+  .featured .container .left .popular button {
+    font-size: 14px;
+    padding: 10px 20px; /* Make buttons larger for better touch interaction */
+    margin: 5px 0; /* Space out buttons vertically */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -188,7 +214,8 @@
   }
 
   .featured .container .left .popular button {
-    font-size: 10px;
+    font-size: 12px; /* Smaller font size on the smallest screens */
+    padding: 8px 16px; /* Adjust button size for small mobile screens */
   }
 
   .featured .container .right img {
@@ -196,3 +223,4 @@
     height: 250px;
   }
 }
+     
