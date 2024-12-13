@@ -1,4 +1,3 @@
-
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
@@ -13,8 +12,11 @@ import Orders from "./pages/orders/Orders";
 import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
 import MyGigs from "./pages/myGigs/MyGigs";
+import ProPage from "./components/propage/ProPage"; // Import ProPage
+import "./App.css";
 
 function App() {
+  // Layout includes the Navbar, Footer, and the main content rendered via Outlet
   const Layout = () => {
     return (
       <div className="app">
@@ -25,6 +27,7 @@ function App() {
     );
   };
 
+  // Define the router with createBrowserRouter
   const router = createBrowserRouter([
     {
       path: "/",
@@ -62,6 +65,10 @@ function App() {
           path: "/gig/:id",
           element: <Gig />,
         },
+        {
+          path: "/pro", // Add the /pro route here
+          element: <ProPage />,
+        },
       ],
     },
     {
@@ -74,6 +81,7 @@ function App() {
     },
   ]);
 
+  // Return the RouterProvider with the configured routes
   return <RouterProvider router={router} />;
 }
 

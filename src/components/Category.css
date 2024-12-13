@@ -1,0 +1,31 @@
+.category-list {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+  }
+  
+  .category-list h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .category-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .category-list li:hover {
+    color: #1dbf73;
+  }
+  

@@ -1,0 +1,78 @@
+.language-currency-box {
+    position: fixed; /* Fixed to ensure it stays on top of the page */
+    top: 50%; /* Position from top to center */
+    left: 50%; /* Position from left to center */
+    transform: translate(-50%, -50%); /* Offset by 50% of its own size to center it */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    max-width: 90%; /* Responsive width */
+    width: 500px; /* Maximum width for the box */
+    box-sizing: border-box;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content does not overflow */
+  }
+  
+  .language-currency-box .close-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    border-radius: 4px;
+    margin-top: -10px;
+  }
+  
+  .language-currency-box h3 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .language-currency-box .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  .language-currency-box .options h4 {
+    margin-bottom: 10px;
+  }
+  
+  .language-currency-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .language-currency-box ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .language-currency-box ul li:hover {
+    background-color: #f0f0f0; /* Hover effect */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .language-currency-box {
+      width: 90%; /* Take 90% of the screen width on mobile */
+      padding: 10px;
+    }
+  
+    .language-currency-box .options {
+      flex-direction: column; /* Stack the options vertically on small screens */
+    }
+  
+    .language-currency-box ul li {
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+  }
+  

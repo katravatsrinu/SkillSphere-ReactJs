@@ -1,0 +1,119 @@
+.pro-page {
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plan-card {
+  width: 300px;
+  min-height: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  color: #00796b;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center; /* Center text alignment */
+}
+
+.plan-price {
+  font-size: 1.5rem;
+  color: #ff6f00;
+  margin-bottom: 15px;
+  text-align: center; /* Center text alignment */
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: center; /* Center text alignment */
+}
+
+.feature-item {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.subscribe-btn {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #004d40;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center; /* Center all text inside cards */
+  }
+
+  .plan-features {
+    text-align: center; /* Center the features list */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .plan-card {
+    width: 100%;
+    text-align: center; /* Ensure text alignment remains centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content within cards */
+    justify-content: space-between;
+  }
+
+  .plan-name {
+    font-size: 1.5rem;
+  }
+
+  .plan-price {
+    font-size: 1.3rem;
+  }
+
+  .subscribe-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}

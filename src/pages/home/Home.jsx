@@ -62,7 +62,7 @@ function Home() {
             </p>
           </div>
           <div className="item">
-            <video src="./video.mp4" controls />
+            <video src="./intro.mp4" controls autoPlay muted />
           </div>
         </div>
       </div>
