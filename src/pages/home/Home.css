@@ -130,89 +130,6 @@ body {
       width: 100%; /* Ensure video takes up full container width */
     }
   }
-  /* Explore section */
-.explore {
-  display: flex;
-  justify-content: center;
-  padding: 100px 0px;
-}
-
-.explore .container {
-  width: 1400px;
-}
-
-.explore .container h1 {
-  color: #555;
-}
-
-.explore .container .items {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.explore .container .items .item {
-  width: 230px; /* Set width for the items */
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 20px; /* Add some space between items */
-}
-
-.explore .container .items .item img {
-  width: 40px; /* Smaller size for icons on larger screens */
-  height: 40px;
-}
-
-.explore .container .items .item .line {
-  width: 50px;
-  height: 2px;
-  background-color: lightgray;
-  transition: all 0.3s ease;
-}
-
-.explore .container .items .item span {
-  font-weight: 300;
-}
-
-/* Hover effect for the items */
-.explore .container .items .item:hover .line {
-  width: 80px;
-  background-color: #1dbf73;
-}
-
-/* Media Queries */
-
-/* For Tablet and Mobile (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-  .explore .container .items .item {
-    width: 45%; /* Each item will occupy 45% of the container, so two items per row */
-  }
-
-  .explore .container .items .item img {
-    width: 30px; /* Smaller size for the icons */
-    height: 30px;
-  }
-}
-
-/* For smaller mobile screens (max-width: 480px) */
-@media only screen and (max-width: 480px) {
-  .explore .container .items .item {
-    width: 45%; /* Keep two items per row */
-  }
-
-  .explore .container .items .item img {
-    width: 25px; /* Further reduce icon size */
-    height: 25px;
-  }
-}
-
 
   @media only screen and (max-width: 768px) {
     .home .features .container .item {
@@ -262,6 +179,89 @@ body {
     }
   }
 
+  /* Explore section */
+  .explore {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+  }
+
+  .explore .container {
+    width: 1400px;
+  }
+
+  .explore .container h1 {
+    color: #555;
+  }
+
+  .explore .container .items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+
+  .explore .container .items .item {
+    width: 230px; /* Set width for the items */
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add some space between items */
+  }
+
+  .explore .container .items .item img {
+    width: 40px; /* Smaller size for icons on larger screens */
+    height: 40px;
+  }
+
+  .explore .container .items .item .line {
+    width: 50px;
+    height: 2px;
+    background-color: lightgray;
+    transition: all 0.3s ease;
+  }
+
+  .explore .container .items .item span {
+    font-weight: 300;
+  }
+
+  /* Hover effect for the items */
+  .explore .container .items .item:hover .line {
+    width: 80px;
+    background-color: #1dbf73;
+  }
+
+  /* Media Queries */
+
+  /* For Tablet and Mobile (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    .explore .container .items .item {
+      width: 45%; /* Each item will occupy 45% of the container, so two items per row */
+    }
+
+    .explore .container .items .item img {
+      width: 30px; /* Smaller size for the icons */
+      height: 30px;
+    }
+  }
+
+  /* For smaller mobile screens (max-width: 480px) */
+  @media only screen and (max-width: 480px) {
+    .explore .container .items .item {
+      width: 45%; /* Keep two items per row */
+    }
+
+    .explore .container .items .item img {
+      width: 25px; /* Further reduce icon size */
+      height: 25px;
+    }
+  }
+
   /* Our Categories section (Testimonials) */
   .services.testimonials {
     padding: 5rem 20vw;
@@ -302,13 +302,14 @@ body {
     overflow: hidden; /* Ensures content doesn't overflow card borders */
     background-color: #ffffff; /* White background */
   }
-
   .services .testimonial-items img {
-    width: 100%; /* Make the image take the full width of the card */
-    height: 150px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Ensures the image maintains aspect ratio while filling the area */
-    border-radius: 0; /* Remove circular styling */
+    width: 100%; /* Keep the image width at 100% */
+    height: 250px; /* Increase the height for better visibility */
+    object-fit: cover; /* Keeps aspect ratio and fills the area */
+    border-radius: 0; /* No border-radius */
   }
+
+
 
   .services .testimonial-items h4 {
     color: #333333; /* Dark gray */
